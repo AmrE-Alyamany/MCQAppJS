@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <form id="form" action="/" method="post">
+            <label for="name">Enter your name</label>
+            <input id="name" type="text" name="name" placeholder="**Name***" required>
+            <label for="age">Enter your Age</label>
+            <input id="age" type="number" name="age" placeholder="***Age***" required>
+            <button type="submit" onclick="quizLaunching();">Enter</button>
+        </form>
+        <div id="start" style="display: none">Start Quiz!</div>
+        <div class="plrdata" id="plrdata" style="display: none">
+            <h4>Name : <span id="nameVal"></span></h4>
+            <h4>Age : <span id="ageVal"></span></h4>
+            <h4>Score: <span id="scoreVal"></span></h4>
+        </div>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="qImg"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
